@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Project_115_Castro_Sanchez</string>
+
+    <string name="linktosite">
+        <a href="https://www.bioversityinternational.org/fileadmin/bioversity/publications/Web_version/572/ch30.htm">reference</a>
+    </string>
+
+    <string-array name="choices">
+        <item>Rosario, La Union</item>
+        <item>Magalang, Pampanga</item>
+        <item>Dunarao, Capiz</item>
+        <item>Minglanilla, Cebu</item>
+        <item>Malaybalay, Bukidnon</item>
+        <item>Bislig, Surigao del Sur</item>
+    </string-array>
+</resources>
