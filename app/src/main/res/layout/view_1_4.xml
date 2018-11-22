@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View_1_4"
-    android:background="#026940">
+    android:background="#026940"
+    tools:context=".View_1_4">
 
     <TextView
         android:id="@+id/Title_1"
