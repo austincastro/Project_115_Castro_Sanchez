@@ -1,0 +1,14 @@
+package com.example.project_115_castro_sanchez;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class Receipt extends AppCompatActivity
+{
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.receipt);
+    }
+}

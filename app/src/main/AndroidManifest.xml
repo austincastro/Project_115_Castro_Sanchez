@@ -59,7 +59,8 @@
         <activity android:name=".View_6_3" />
         <activity android:name=".View_6_4" />
         <activity android:name=".View_6_5" />
-        <activity android:name=".View_6_6"></activity>
+        <activity android:name=".View_6_6" />
+        <activity android:name=".Receipt"></activity>
     </application>
 
 </manifest>
