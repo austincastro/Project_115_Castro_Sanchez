@@ -1,17 +1,21 @@
 package com.example.project_115_castro_sanchez;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class SubActivity_2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 {
     String answer;
+    EditText eInput_1, eInput_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,6 +28,9 @@ public class SubActivity_2 extends AppCompatActivity implements AdapterView.OnIt
         adapter.setDropDownViewResource(R.layout.my_spinner);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        eInput_1 = findViewById(R.id.Input_1);
+        eInput_2 = findViewById(R.id.Input_2);
     }
 
     @Override
@@ -65,6 +72,23 @@ public class SubActivity_2 extends AppCompatActivity implements AdapterView.OnIt
         if(v.getId() == R.id.button_home)
         {
             i = new Intent(SubActivity_2.this, MainActivity.class);
+            SubActivity_2.this.startActivity(i);
+        }
+
+        if(v.getId() == R.id.button_submit)
+        {
+            SharedPreferences sp = getSharedPreferences("data1", Context.MODE_PRIVATE);
+            SharedPreferences.Editor writer = sp.edit();
+
+            String val_1 = eInput_1.getText().toString();
+            String val_2 = eInput_2.getText().toString();
+
+            writer.putString("name",val_1);
+            writer.putString("amount",val_2);
+            writer.putString("location",answer);
+            writer.commit();
+
+            i = new Intent(SubActivity_2.this, Receipt.class);
             SubActivity_2.this.startActivity(i);
         }
     }
